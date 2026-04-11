@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Muguyo</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Crimson+Pro:wght@300;400&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="Images/21334.jpg">
+</head>
+<body>
+
+    <div style="position: fixed; top: 1rem; left: 50%; transform: translateX(-50%); width: 90%; max-width: 900px; z-index: 1000;">
+        <nav class="navbar navbar-expand-lg navbar-dark rounded-pill px-4 my-navbar">
+            <div class="container-fluid">
+
+      <!-- Brand / Logo (left side) -->
+                <a class="navbar-brand fw-bold" href="#home">JM</a>
+
+      <!-- Nav links (center, hidden on mobile) -->
+                <div class="collapse navbar-collapse justify-content-center" id="centeredNav">
+                    <ul class="navbar-nav gap-1">
+                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects/Certificates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+      <!-- Right side: theme toggle + hamburger -->
+                <div class="d-flex align-items-center gap-2">
+
+        <!-- Dark/Light toggle button -->
+                    <button id="themeToggle" onclick="toggleTheme()"
+                     style="width:36px; height:36px; border-radius:50%; border:1px solid rgba(255,255,255,0.25);
+                        background:rgba(255,255,255,0.1); color:#fff; cursor:pointer;
+                        display:flex; align-items:center; justify-content:center; font-size:14px; transition:all 0.25s;">
+                     <i class="fa-solid fa-sun" id="themeIcon"></i>
+                    </button>
+
+        <!-- Hamburger (only shows on mobile) -->
+                    <button class="navbar-toggler border-0" type="button"
+                            id="mobileMenuBtn"
+                            style="padding:4px 6px;">
+                     <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+             </div>
+            </nav>
+    
+
+            <div id="mobileDropdown"
+                style="display:none; margin-top: 10px; border-radius: 20px; overflow: hidden;
+                background: radial-gradient(circle, rgb(13,13,98), rgb(12,21,72), rgb(6,28,125));
+                border: 1px solid rgba(255,255,255,0.1); padding: 10px;">
+             <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#home"   onclick="closeMobileMenu()">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about"  onclick="closeMobileMenu()">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects" onclick="closeMobileMenu()">Projects/Certificates</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+             </ul>
+            </div>
+
+        </div>
+
+
+    <section id="home">
+      <div class="container">
+        <div class="row align-items-center gy-5" style="min-height: calc(100vh - 90px);">
+
+      <!-- Text column -->
+         <div class="col-lg-6 col-md-6">
+           <p class="hero-eyebrow">Welcome</p>
+           <h1 class="hero-title">
+             Hi, I'm
+            <span class="accent">
+              <span class="name-italic">Jordan</span>
+              Muguyo
+            </span>
+           </h1>
+           <div class="hero-divider"></div>
+           <p class="hero-subtitle">A web developer building modern responsive web interfaces with Bootstrap and CSS.</p>
+           <div class="d-flex flex-wrap gap-3">
+            <a href="#projects" class="btn-warning-custom"><i class="fa-solid fa-rocket"></i> View Projects</a>
+            <a href="#contact" class="btn-outline-custom"><i class="fa-regular fa-envelope"></i> Get In Touch</a>
+          </div>
+         </div>
+
+      <!-- Image column — sits BESIDE the text on desktop -->
+         <div class="col-lg-6 col-md-6 d-flex justify-content-center">
+           <div class="hero-img-wrapper">
+             <img src="Images/21334.jpg" alt="Jordan Muguyo" class="hero-img">
+           </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</div>
+
+<section id="about">
+    <div class="container">
+      <div class="row gy-5 align-items-center">
+        <div class="col-lg-6 fade-up">
+          <p class="section-label">About Me</p>
+          <h2 class="section-title">Passionate about<br>building the web</h2>
+          <div class="divider"></div>
+          <p class="about-text">
+            I'm Jordan Muguyo, a computer science student learning at Midlands State University with a deep interest in creating clean, responsive, and user-friendly interfaces. My academic focus centres on frontend technologies and modern web practices.
+          </p>
+          <p class="about-text">
+            When I'm not coding, I enjoy exploring new technologies, and continuously improving my craft. I believe great software is built at the intersection of logic and design.
+          </p>
+        </div>
+        <div class="col-lg-6 fade-up">
+          <div class="counters-grid">
+            <div class="counter-card">
+              <div class="counter-num" data-target="3">0</div>
+              <div class="counter-label">Projects Built</div>
+            </div>
+            <div class="counter-card">
+              <div class="counter-num" data-target="3">0</div>
+              <div class="counter-label">Years Learning</div>
+            </div>
+            <div class="counter-card">
+              <div class="counter-num" data-target="8">0</div>
+              <div class="counter-label">Technologies</div>
+            </div>
+            <div class="counter-card">
+              <div class="counter-num" data-target="4">0</div>
+              <div class="counter-label">Certificates</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="fade-up">
+        <p class="section-label">What I Know</p>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-6 fade-up">
+          <div class="skills-category">
+            <p class="skills-cat-title">Programming Languages</p>
+            <div class="skills-pills">
+              <span class="skill-pill">HTML5</span>
+              <span class="skill-pill">CSS3</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">C#</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <p class="skills-cat-title">Frameworks / Libraries</p>
+            <div class="skills-pills">
+              <span class="skill-pill">Bootstrap</span>
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">Express</span>
+              <span class="skill-pill">Custom-Tkinter</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 fade-up">
+          <div class="skills-category">
+            <p class="skills-cat-title">Tools / Platforms</p>
+            <div class="skills-pills">
+              <span class="skill-pill">Git & GitHub</span>
+              <span class="skill-pill">VS Code</span>
+              <span class="skill-pill">Figma</span>
+              <span class="skill-pill">Netlify</span>
+              <span class="skill-pill">Unity</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <p class="skills-cat-title">Databases</p>
+            <div class="skills-pills">
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">SQLite3</span>
+              <span class="skill-pill">MongoDB</span>
+              <span class="skill-pill">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="fade-up">
+        <p class="section-label">My Work</p>
+        <h2 class="section-title">Featured Projects and Certificates</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="row g-4">
+
+      <!-- Project 1 -->
+        <div class="col-lg-4 col-md-6 fade-up">
+          <div class="project-card">
+            <span class="project-emoji">🌐</span>
+            <h3 class="project-title">Personal Portfolio</h3>
+            <p class="project-desc">Designed and developed a fully responsive personal portfolio website showcasing my projects, skills, and certifications.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag">CSS3</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Bootstrap5</span>
+            </div>
+            <div class="project-links" style="position: relative; z-index: 2;">
+              <a href="https://github.com/JordanM2077/Diet_recommendation_2." class="project-link" style="position: relative; z-index: 2;" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="project-link" style="position: relative; z-index: 2;" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i>Live demo</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Project 2 -->
+        <div class="col-lg-4 col-md-6 fade-up">
+          <div class="project-card">
+            <span class="project-emoji">💻</span>
+            <h3 class="project-title">Educational Keylogger</h3>
+            <p class="project-desc">I built a keylogger in Python to understand how malicious input capture works at the OS level. This was used in a sandboxed personal environment to study detection techniques and defensive countermeasures.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Pynput</span>
+              <span class="project-tag">Custom-Tkinter</span>
+            </div>
+            <div class="project-links" style="position: relative; z-index: 2;">
+              <a href="#" class="project-link" style="position: relative; z-index: 2;" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificate -->
+        <div class="col-lg-4 col-md-6 fade-up">
+          <div class="project-card">
+            <img src="Images/9beb9243-3360-4813-8bfd-505b26e9e80a.png" 
+                class="card-img-top" 
+                alt="SQL Injection Certificate"
+                style="border-radius: 12px; margin-bottom: 16px; width: 100%; object-fit: cover;">
+            <h3 class="project-title">SQL Injection Attacks</h3>
+            <p class="project-desc">Completed certified training in SQL injection techniques. Gained hands-on experience identifying and exploiting vulnerable queries in controlled lab environments.</p>
+            <div class="project-tags">
+              <span class="project-tag">SQL</span>
+              <span class="project-tag">Penetration Testing</span>
+              <span class="project-tag">Ethical Hacking</span>
+            </div>
+            <div class="project-links" style="position: relative; z-index: 2;">
+              <a href="https://learn.eccouncil.org/certificate/b79c2f8d-abe2-4af0-9387-6f07a81b91ad?logged=true" 
+                class="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="position: relative; z-index: 2;">
+                <i class="fa-solid fa-certificate"></i> View Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 fade-up">
+          <div class="project-card">
+            <span class="project-emoji">🐉</span>
+            <h3 class="project-title"> Kali Linux for Ethical Hacking and Security Analysis</h3>
+            <p class="project-desc">Completed certified training in the basics of Kali Linux. Learned more about tools in Kali such as Nmap, Metasploit, and Wireshark for network scanning, vulnerability exploitation, and traffic analysis in a controlled lab environment.</p>
+            <div class="project-tags">
+              <span class="project-tag">Kali Linux</span>
+              <span class="project-tag">Penetration Testing</span>
+              <span class="project-tag">Ethical Hacking</span>
+            </div>
+            <div class="project-links" style="position: relative; z-index: 2;">
+              <a href="https://alison.com/verify/cacee2ebec" 
+                class="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="position: relative; z-index: 2;">
+                <i class="fa-solid fa-certificate"></i> View Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 fade-up">
+          <div class="project-card">
+            <span class="project-emoji">🤖</span>
+            <h3 class="project-title"> AI-Powered Cybersecurity Fundamentals</h3>
+            <p class="project-desc">Completed certified training in AI-Powered Cybersecurity Fundamentals. l Learned how artificial intelligence is applied in modern cybersecurity.Covered AI-driven threat detection, anomaly detection, and automated incident response.</p>
+            <div class="project-tags">
+              <span class="project-tag">Artificial Intelligence</span>
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">Threat Detection</span>
+              <span class="project-tag">Cybersecurity</span>
+            </div>
+            <div class="project-links" style="position: relative; z-index: 2;">
+              <a href="https://alison.com/verify/33daab9648" 
+                class="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="position: relative; z-index: 2;">
+                <i class="fa-solid fa-certificate"></i> View Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="text-center fade-up mb-5">
+              <p class="section-label">Get In Touch</p>
+              <h2 class="section-title">Send a Message</h2>
+              <div class="divider mx-auto"></div>
+              <p class="about-text">Have a project in mind or want to connect? Fill out the form below and I'll get back to you.</p>
+            </div>
+            <div class="contact-wrapper fade-up">
+              
+            <form id="contactForm" action="https://formspree.io/f/xbdpvnvn" method="POST" novalidate>
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" class="form-control-custom" placeholder="Jordan Muguyo">
+                <span class="error-msg">Please enter your name.</span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control-custom" placeholder="jordan@example.com">
+                <span class="error-msg" id="email-error">Please enter a valid email.</span>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" class="form-control-custom" rows="5" placeholder="Type your message here..."></textarea>
+                <span class="error-msg">Please enter a message (min 10 characters).</span>
+              </div>
+              <button type="submit" class="btn-primary-custom w-100 justify-content-center">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+              <div class="toast-msg" id="successToast">🎉 Message sent! I'll get back to you soon.</div>
+            </form>
+
+              <!-- Social links -->
+              <div class="mt-4 pt-4" style="border-top: 1px solid #2c2c43;">
+                <p style="font-weight: 470; font-size:0.82rem; color:#c0c0d5; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px;">Find me on</p>
+                <div class="social-icons">
+                  <a href="https://github.com/JordanM2077" target="_blank" class="social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/jordan-muguyo-88b8613b4/" target="_blank" class="social-icon" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="https://www.instagram.com/" target="_blank" class="social-icon" title="Twitter / X"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- ═══════ FOOTER ═══════ -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Jordan Muguyo — Portfolio ☕</p>
+    </div>
+  </footer>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+ // ── Mobile menu toggle ──
+document.getElementById('mobileMenuBtn').addEventListener('click', function(e) {
+  e.stopPropagation();
+  const menu = document.getElementById('mobileDropdown');
+  menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+});
+
+// Close when clicking outside
+document.addEventListener('click', function(e) {
+  const menu = document.getElementById('mobileDropdown');
+  const btn = document.getElementById('mobileMenuBtn');
+  if (!menu.contains(e.target) && !btn.contains(e.target)) {
+    menu.style.display = 'none';
+  }
+});
+
+function closeMobileMenu() {
+  document.getElementById('mobileDropdown').style.display = 'none';
+}
+
+// ── Theme toggle ──
+function toggleTheme() {
+  const isDark = document.body.getAttribute('data-theme') !== 'light';
+  const newTheme = isDark ? 'light' : 'dark';
+  document.body.setAttribute('data-theme', newTheme);
+  document.getElementById('themeIcon').className = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+  localStorage.setItem('theme', newTheme);
+
+  const nav = document.querySelector('.my-navbar');
+  nav.classList.toggle('navbar-dark', !isDark);
+  nav.classList.toggle('navbar-light', isDark);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (prefersDark ? 'dark' : 'light');
+  document.body.setAttribute('data-theme', theme);
+  document.getElementById('themeIcon').className =
+    theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+
+  const nav = document.querySelector('.my-navbar');
+  nav.classList.toggle('navbar-dark', theme === 'dark');
+  nav.classList.toggle('navbar-light', theme === 'light');
+});
+
+const fadeObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); fadeObserver.unobserve(entry.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+
+function animateCounter(el) {
+      const target = +el.getAttribute('data-target');
+      let current = 0;
+      const step = target / 60;
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) { el.textContent = target + '+'; clearInterval(timer); }
+        else { el.textContent = Math.floor(current); }
+      }, 25);
+    }
+
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.counter-num[data-target]').forEach(el => counterObserver.observe(el));
+
+    const form = document.getElementById('contactForm');
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  let valid = true;
+
+  const name = document.getElementById('name');
+  const email = document.getElementById('email');
+  const message = document.getElementById('message');
+  const emailError = document.getElementById('email-error');
+  const toast = document.getElementById('successToast');
+
+  // Reset invalid states
+  [name, email, message].forEach(f => f.classList.remove('invalid'));
+
+  // Validate
+  if (!name.value.trim()) { name.classList.add('invalid'); valid = false; }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email.value.trim())) {
+    email.classList.add('invalid');
+    emailError.textContent = email.value.trim() ? 'Please enter a valid email.' : 'Email is required.';
+    valid = false;
+  }
+
+  if (message.value.trim().length < 10) { message.classList.add('invalid'); valid = false; }
+
+  if (valid) {
+    // Send to Formspree
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      toast.textContent = '🎉 Message sent! I\'ll get back to you soon.';
+      toast.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+      toast.classList.add('show');
+      form.reset();
+    } else {
+      toast.textContent = '❌ Something went wrong. Please try again.';
+      toast.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+      toast.classList.add('show');
+    }
+
+    setTimeout(() => toast.classList.remove('show'), 4000);
+  }
+});
+
+document.querySelectorAll('.form-control-custom').forEach(input => {
+  input.addEventListener('input', () => input.classList.remove('invalid'));
+});
+
+</script>
+    
+</body>
+</html>
