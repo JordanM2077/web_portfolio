@@ -2,7 +2,9 @@
 html, body {
   overflow-x: hidden;  /* prevents horizontal scroll */
   overflow-y: auto;    /* ensures vertical scroll is allowed */
+  -webkit-overflow-scrolling: touch;
   height: auto;        /* don't lock height to viewport */
+  -webkit-tap-highlight-color: transparent;
 }
 
 section{
@@ -17,7 +19,7 @@ body::before {
         background-image: url(Images/dark_background.png);
         background-size: cover;
         background-position: center;
-        background-attachment: fixed;
+        background-attachment: scroll;
         transition: opacity 0.6s ease;
         opacity: 1;
     }
@@ -30,7 +32,7 @@ body::before {
         background-image: url(Images/light_background.png);
         background-size: cover;
         background-position: center;
-        background-attachment: fixed;
+        background-attachment: scroll;
         transition: opacity 0.6s ease;
         opacity: 0;
     }
@@ -193,6 +195,8 @@ body[data-theme="light"] .hero-eyebrow{
     border-radius: 12px;
     color: rgba(255,255,255,0.85);
     transition: background 0.2s;
+    -webkit-backdrop-filter:blur(20px);
+    backdrop-filter:blur(20px);
   }
 
   #mobileDropdown .nav-link:hover {
@@ -644,6 +648,32 @@ body[data-theme="light"] .hero-img-wrapper::before {
 
   footer {
     text-align: center;
+  }
+}
+/* ── iOS FIXES ── */
+
+/* Inputs — prevents iOS auto-zoom on focus */
+input, textarea, select {
+  font-size: 16px !important;
+}
+
+/* Buttons — forces consistent rendering on iOS */
+button, input[type="submit"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Safe area padding for iPhone notch and home bar */
+body {
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Fixed background only on non-touch devices (hover:hover = has a mouse) */
+@media (hover: hover) {
+  body::before, body::after {
+    background-attachment: fixed;
   }
 }
 
