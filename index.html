@@ -470,7 +470,7 @@ form.addEventListener('submit', async e => {
     valid = false;
   }
 
-  if (message.value.trim().length < 10) { message.classList.add('invalid'); valid = false; }
+  if (message.value.trim().length < 3) { message.classList.add('invalid'); valid = false; }
 
   if (valid) {
     // Send to Formspree
